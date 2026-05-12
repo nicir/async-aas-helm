@@ -162,7 +162,7 @@ The `dataschema` property can only reference elements with their own HTTP endpoi
 **The following interface operations will trigger this event:**
 
 - `PutAssetAdministrationShell` 
-*(in case an AAS with the ID specified in the payload is already existing)*
+*(in case an AAS with the ID specified in the payload already exists)*
 
     Creates or replaces an existing Asset Administration Shell Descriptor, i.e., replaces registration information
 
@@ -172,7 +172,7 @@ The `dataschema` property can only reference elements with their own HTTP endpoi
     |   | 	Replaced Asset Administration Shell   |
 
 - `PutAssetAdministrationShellById` 
-*(in case an AAS with the ID specified in the operation (e.g., URL for HTTP REST) is already existing)*
+*(in case an AAS with the ID specified in the operation (e.g., URL for HTTP REST) already exists)*
 
     Creates or replaces an existing Asset Administration Shell
 
@@ -223,8 +223,6 @@ The `dataschema` property can only reference elements with their own HTTP endpoi
     | The unique ID of the Submodel for the reference to be deleted*  | Status code*   |
 
 _("*" indicates a mandatory parameter)_
-
-<!-- If submodel is newly created, does it automatically create a submodel reference eithin the AAS, i.e. updating the AAS? -->
 
 **HTTP REST Example:**
 ```REST
@@ -318,7 +316,7 @@ The `dataschema` property can only reference the SM metamodel element as SMEs ar
     |   |  Updated  submodel*   |
 
 - `PutSubmodel`
-*(in case a SM with the specified ID is already existing)*
+*(in case a SM with the specified ID already exists)*
 
     Replaces the Submodel
 
@@ -328,8 +326,6 @@ The `dataschema` property can only reference the SM metamodel element as SMEs ar
     |   |  Replaced submodel*   |
 
 _("*" indicates a mandatory parameter)_
-
-<!-- If a new SubmodelElement is created (PostSubmodelElement) or deleted (DeleteSubmodelElementByPath), does this update the Submodel itself? -->
 
 **HTTP REST Example:**
 ```REST
@@ -364,7 +360,7 @@ Consumers MUST consider any locally cached state for the identified SM invalid u
     | The Submodel’s unique ID*  | Status code*   |
 
 - `PutSubmodel`
-*(in case a SM with the specified ID is already existing)*
+*(in case a SM with the specified ID already exists)*
 
     Replaces the Submodel
 
@@ -471,7 +467,7 @@ Consumers SHOULD use this event as the primary mechanism for tracking live data 
     | idShortPath via relative Reference/Keys to a submodel element*  |  |
 
 - `PutSubmodelElementByPath`
-*(in case a SME with the specified ID is already existing)*
+*(in case a SME with the specified ID already exists)*
 
     Replaces an existing submodel element or creates a new submodel element at a specified path within the submodel element hierarchy
 
@@ -548,7 +544,7 @@ Consumers MUST invalidate any locally cached state for the deleted element upon 
     | idShortPath via relative Reference/Keys to a submodel element*  | Status code*   |
 
 - `PutSubmodelElementByPath`
-*(in case a SME with the specified ID is already existing)*
+*(in case a SME with the specified ID already exists)*
 
     Replaces an existing submodel element or creates a new submodel element at a specified path within the submodel element hierarchy
 
