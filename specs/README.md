@@ -162,7 +162,7 @@ The `dataschema` property can only reference elements with their own HTTP endpoi
 **The following interface operations will trigger this event:**
 
 - `PutAssetAdministrationShell` 
-*(in case an AAS with the ID specified in the payload is not existing yet)*
+*(in case an AAS with the ID specified in the payload is already existing)*
 
     Creates or replaces an existing Asset Administration Shell Descriptor, i.e., replaces registration information
 
@@ -172,7 +172,7 @@ The `dataschema` property can only reference elements with their own HTTP endpoi
     |   | 	Replaced Asset Administration Shell   |
 
 - `PutAssetAdministrationShellById` 
-*(in case an AAS with the ID specified in the operation (e.g., URL for HTTP REST) is not existing yet)*
+*(in case an AAS with the ID specified in the operation (e.g., URL for HTTP REST) is already existing)*
 
     Creates or replaces an existing Asset Administration Shell
 
